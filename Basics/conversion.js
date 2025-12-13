@@ -25,7 +25,6 @@ console.log(booleanIsLoggedIn);
 // "jbskauh" => true
 
 let someNumber = 33
-
 let stringSomeNumber = String(someNumber)
 console.log(typeof stringSomeNumber)
 console.log(stringSomeNumber)

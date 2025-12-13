@@ -17,7 +17,6 @@ let state = null
 // undefine => 
 // symbol => unique
 
-
 // object 
 
 console.log(typeof name)
