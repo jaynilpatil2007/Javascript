@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .google-link {
+      color: #ee6983;
+    }
+    body {
+      background-color: #212121;
+      color: #ee6983;
+    }
+  </style>
+  <body>
+    <h2>Amazing image</h2>
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="200px"
+            id="photoshop"
+            alt="photoshop"
+            src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="japan"
+            alt=""
+            src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="river"
+            alt=""
+            src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="owl"
+            alt=""
+            src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+          />
+        </li>
+        <li>
+          <img
+            width="200px"
+            id="prayer"
+            src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
+            alt=""
+          />
+        </li>
+        <li>
+          <a id="google-link" href="https://google.com" id="google">Google</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // document.getElementById("owl").onclick = () => {
+    //   alert("owl clicked");
+    // };
+
+    // type, timestamp, preventDefault()
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     console.log("clicked inside the ul");
+    //   },
+    //   false
+    // );
+
+    // document.getElementById("owl").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     console.log("owl clicked");
+    //     e.stopPropagation();
+    //   },
+    //   false
+    // );
+
+    // document.getElementById("google-link").addEventListener(
+    //   "click",
+    //   (e) => {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("Google clicked");
+    //   },
+    //   false
+    // );
+
+    document.querySelector("#images").addEventListener(
+      "click",
+      (e) => {
+        if (e.target.tagName === "IMG") {
+          console.log(e.target.id);
+          let remove = e.target.parentNode;
+          remove.remove();
+        }
+      },
+      // remove.parentNode.removeChild(remove);   // another method to remove
+      false
+    );
+  </script>
+</html>
